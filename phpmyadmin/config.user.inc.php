@@ -7,9 +7,9 @@
     $cfg['Servers'][$i]['connect_type'] = 'tcp';
     $cfg['Servers'][$i]['extension'] = 'mysql1';
     $cfg['Servers'][$i]['auth_type'] = 'config';
-    $cfg['Servers'][$i]['verbose'] = 'root';
-    $cfg['Servers'][$i]['verbose'] = 'password';
-    $cfg['Servers'][$i]['verbose'] = 'false';
+    $cfg['Servers'][$i]['user'] = 'root';
+    $cfg['Servers'][$i]['password'] = 'password';
+    $cfg['Servers'][$i]['AllowNoPassword'] = 'false';
 
     $i++;
     $cfg['Servers'][$i]['verbose'] = 'users-service';
@@ -19,6 +19,6 @@
     $cfg['Servers'][$i]['connect_type'] = 'tcp';
     $cfg['Servers'][$i]['extension'] = 'mysqli';
     $cfg['Servers'][$i]['auth_type'] = 'config';
-    $cfg['Servers'][$i]['verbose'] = 'root';
-    $cfg['Servers'][$i]['verbose'] = 'password';
-    $cfg['Servers'][$i]['verbose'] = 'false';
+    $cfg['Servers'][$i]['user'] = 'root';
+    $cfg['Servers'][$i]['password'] = 'password';
+    $cfg['Servers'][$i]['AllowNoPassword'] = 'false';

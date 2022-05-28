@@ -27,7 +27,7 @@ services:
   users-service-db:
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_ROOT_PASSWORD-service_DATABASE=db
+      - MYSQL_DATABASE=db
     image: mysql:5.7.20
     ports:
       - '7201:3006'
@@ -45,7 +45,7 @@ services:
   chat-service-db:
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_ROOT_PASSWORD-service_DATABASE=db
+      - MYSQL_DATABASE=db
     image: mysql:5.7.20
     ports:
       - '7200:3006'
