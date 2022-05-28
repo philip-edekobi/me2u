@@ -5,12 +5,12 @@ export default class User {
     @PrimaryGeneratedColumn("uuid")
     id: string;
 
-    @Column("name")
+    @Column()
     username: string;
 
     @Column({ select: false })
     passwordHash: string;
 
-    @CreateDateColumn("created_at")
-    created_at: string;
+    @CreateDateColumn()
+    createdAt: string;
 }
