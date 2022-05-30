@@ -29,7 +29,7 @@ export default function setupRoutes(app: Express) {
             if(!user) return next(new Error("Invalid username!!"));
 
             const existingSession = await userSessionRepository.findOne({ userId: user.id });
-            if(existingSession) return res.status(200).json(existingSession);
+            if(existingSession && existingSession.expiresAt > new Date().toISOString()) return res.status(200).json(existingSession);
 
             if(!(passwordCompareSync(req.body.password, user.passwordHash))){
                 return next(new Error("Invalid password!"));
