@@ -35,9 +35,9 @@ export default function setupRoutes(app: Express) {
                 return next(new Error("Invalid password!"));
             }
 
-            const expiresAt = await dayjs().add(SESSION_DURATION, "hour").toISOString();
+            const expiresAt = dayjs().add(SESSION_DURATION, "hour").toISOString();
 
-            const sessionToken = await generateUUID() as string;
+            const sessionToken = generateUUID() as string;
 
             const userSession = {
                 expiresAt: expiresAt,                

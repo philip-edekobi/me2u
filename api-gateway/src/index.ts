@@ -1,1 +1,7 @@
-console.log("api gateway dey hail!!!");
+import "reflect-metadata";
+
+import startServer from "#root/server/startServer";
+
+(async () => {
+    await startServer();
+})();
